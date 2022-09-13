@@ -27,9 +27,7 @@ namespace Memory
         bool TweedeKeus;
         PictureBox EersteKaart;
         PictureBox TweedeKaart;
-        List<int> LijstKaarten = new List<int> { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10 };
-
-        //LijstKaarten.Shuffle();
+        List<int> GeschuddeKaarten = new List<int> { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10 };
 
         public MemoryGame()
         {
@@ -46,18 +44,13 @@ namespace Memory
 
         public void Herstartspel()
         {
-            LijstKaarten = LijstKaarten.OrderBy(a => Guid.NewGuid()).ToList();
+            GeschuddeKaarten = GeschuddeKaarten.OrderBy(a => Guid.NewGuid()).ToList();
 
             lblScorePlayer1.Text = "0";
             lblScorePlayer2.Text = "0";
             Scorepl1 = 0;
             Scorepl2 = 0;
             lblCurrentPlayer.Text = "Player 1";
-            foreach (var p in LijstKaarten)
-            {
-                Console.WriteLine(p);
-            }
-            //LijstKaarten.Shuffle();
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,8 +59,6 @@ namespace Memory
             if (dialogResult == DialogResult.Yes)
             {
                 InitialiserenScherm(sender, e);
-                //Herstartspel();
-
             }
 
         }
@@ -84,21 +75,20 @@ namespace Memory
 
         private void InitialiserenScherm(object sender, EventArgs e)
         {
+
             Herstartspel();
-            //List<int> LijstKaarten = new List<int> { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10 };
+
             var i = 0;
             foreach (var pictureBox in Controls.OfType<PictureBox>())
             {
                 pictureBox.Visible = true;
                 pictureBox.Enabled = true;
-                pictureBox.Tag = LijstKaarten[i].ToString();
+                pictureBox.Tag = GeschuddeKaarten[i].ToString();
 
-                string test1 = "C:\\fontys\\leerjaar 5\\periode 1\\SCC\\Opdrachten\\Opdracht1\\Memory - Copy\\fotostest\\covercardpic.png";
+                string test1 = "C:\\fontys\\leerjaar 5\\periode 1\\SCC\\Opdrachten\\Opdracht1\\Memory Spel\\fotostest\\covercardpic.png";
                 pictureBox.Image = System.Drawing.Image.FromFile(@test1);
 
                 i++;
-
-
             }
 
             foreach (var Label in Controls.OfType<Label>())
@@ -118,7 +108,7 @@ namespace Memory
             {
                 EersteKaart = sender as PictureBox;
                 EersteKaart.Enabled = false;
-                string fullPath1 = Path.GetFullPath(@"C:\fontys\leerjaar 5\periode 1\SCC\Opdrachten\Opdracht1\Memory - Copy\fotostest\" + EersteKaart.Tag.ToString() + ".png");
+                string fullPath1 = Path.GetFullPath(@"C:\fontys\leerjaar 5\periode 1\SCC\Opdrachten\Opdracht1\Memory Spel\fotostest\" + EersteKaart.Tag.ToString() + ".png");
                 EersteKaart.Image = System.Drawing.Image.FromFile(fullPath1);
                 EersteKeus = true;
             }
@@ -128,7 +118,7 @@ namespace Memory
 
                 TweedeKaart = sender as PictureBox;
                 TweedeKaart.Enabled = false;
-                string fullPath2 = Path.GetFullPath(@"C:\fontys\leerjaar 5\periode 1\SCC\Opdrachten\Opdracht1\Memory - Copy\fotostest\" + TweedeKaart.Tag.ToString() + ".png");
+                string fullPath2 = Path.GetFullPath(@"C:\fontys\leerjaar 5\periode 1\SCC\Opdrachten\Opdracht1\Memory Spel\fotostest\" + TweedeKaart.Tag.ToString() + ".png");
                 TweedeKaart.Image = System.Drawing.Image.FromFile(fullPath2);
                 TweedeKaart.Refresh();
                 TweedeKeus = true;
@@ -139,12 +129,12 @@ namespace Memory
             if ((EersteKeus == true) & (TweedeKeus == true))
             //else
             {
-                KaartChecken(EersteKaart, TweedeKaart,sender, e);
+                KaartChecken(EersteKaart, TweedeKaart, sender, e);
             }
 
         }
 
-        private void KaartChecken(PictureBox A, PictureBox B,object sender, EventArgs e)
+        private void KaartChecken(PictureBox A, PictureBox B, object sender, EventArgs e)
         {
             if (A.Tag.ToString() == B.Tag.ToString())
             {
@@ -167,8 +157,8 @@ namespace Memory
             {
                 System.Threading.Thread.Sleep(1000);
 
-                A.Image = System.Drawing.Image.FromFile("C:\\fontys\\leerjaar 5\\periode 1\\SCC\\Opdrachten\\Opdracht1\\Memory - Copy\\fotostest\\covercardpic.png");
-                B.Image = System.Drawing.Image.FromFile("C:\\fontys\\leerjaar 5\\periode 1\\SCC\\Opdrachten\\Opdracht1\\Memory - Copy\\fotostest\\covercardpic.png");
+                A.Image = System.Drawing.Image.FromFile("C:\\fontys\\leerjaar 5\\periode 1\\SCC\\Opdrachten\\Opdracht1\\Memory Spel\\fotostest\\covercardpic.png");
+                B.Image = System.Drawing.Image.FromFile("C:\\fontys\\leerjaar 5\\periode 1\\SCC\\Opdrachten\\Opdracht1\\Memory Spel\\fotostest\\covercardpic.png");
                 EersteKeus = false;
                 TweedeKeus = false;
                 Turn++;
@@ -188,7 +178,7 @@ namespace Memory
 
             if ((Scorepl1 + Scorepl2) == 10)
             {
-                GameOver(Scorepl1, Scorepl2,sender,e);
+                GameOver(Scorepl1, Scorepl2, sender, e);
             }
         }
 
