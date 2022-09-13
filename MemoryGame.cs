@@ -79,6 +79,7 @@ namespace Memory
             Herstartspel();
 
             var i = 0;
+
             foreach (var pictureBox in Controls.OfType<PictureBox>())
             {
                 pictureBox.Visible = true;
