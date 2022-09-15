@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemoryGame));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,7 +97,8 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1056, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(792, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -106,24 +108,25 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmNieuwSpel});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
-            this.fileToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // tsmNieuwSpel
             // 
             this.tsmNieuwSpel.Name = "tsmNieuwSpel";
-            this.tsmNieuwSpel.Size = new System.Drawing.Size(224, 26);
+            this.tsmNieuwSpel.Size = new System.Drawing.Size(180, 22);
             this.tsmNieuwSpel.Text = "Niew spel";
-            this.tsmNieuwSpel.Click += new System.EventHandler(this.InitialiserenScherm);
+            this.tsmNieuwSpel.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // lblTurn
             // 
             this.lblTurn.AutoSize = true;
             this.lblTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurn.Location = new System.Drawing.Point(712, 131);
+            this.lblTurn.Location = new System.Drawing.Point(534, 106);
+            this.lblTurn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTurn.Name = "lblTurn";
-            this.lblTurn.Size = new System.Drawing.Size(93, 38);
+            this.lblTurn.Size = new System.Drawing.Size(78, 31);
             this.lblTurn.TabIndex = 22;
             this.lblTurn.Text = "Turn:";
             this.lblTurn.Visible = false;
@@ -132,9 +135,10 @@
             // 
             this.lblCurrentPlayer.AutoSize = true;
             this.lblCurrentPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentPlayer.Location = new System.Drawing.Point(753, 180);
+            this.lblCurrentPlayer.Location = new System.Drawing.Point(565, 146);
+            this.lblCurrentPlayer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCurrentPlayer.Name = "lblCurrentPlayer";
-            this.lblCurrentPlayer.Size = new System.Drawing.Size(137, 38);
+            this.lblCurrentPlayer.Size = new System.Drawing.Size(113, 31);
             this.lblCurrentPlayer.TabIndex = 23;
             this.lblCurrentPlayer.Text = "Player 1";
             this.lblCurrentPlayer.Visible = false;
@@ -143,9 +147,10 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(712, 229);
+            this.lblScore.Location = new System.Drawing.Point(534, 186);
+            this.lblScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(112, 38);
+            this.lblScore.Size = new System.Drawing.Size(93, 31);
             this.lblScore.TabIndex = 24;
             this.lblScore.Text = "Score:";
             this.lblScore.Visible = false;
@@ -154,9 +159,10 @@
             // 
             this.lblPlayer1.AutoSize = true;
             this.lblPlayer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer1.Location = new System.Drawing.Point(753, 279);
+            this.lblPlayer1.Location = new System.Drawing.Point(565, 227);
+            this.lblPlayer1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPlayer1.Name = "lblPlayer1";
-            this.lblPlayer1.Size = new System.Drawing.Size(146, 38);
+            this.lblPlayer1.Size = new System.Drawing.Size(121, 31);
             this.lblPlayer1.TabIndex = 25;
             this.lblPlayer1.Text = "Player 1:";
             this.lblPlayer1.Visible = false;
@@ -165,9 +171,10 @@
             // 
             this.lblPlayer2.AutoSize = true;
             this.lblPlayer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer2.Location = new System.Drawing.Point(753, 324);
+            this.lblPlayer2.Location = new System.Drawing.Point(565, 263);
+            this.lblPlayer2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPlayer2.Name = "lblPlayer2";
-            this.lblPlayer2.Size = new System.Drawing.Size(146, 38);
+            this.lblPlayer2.Size = new System.Drawing.Size(121, 31);
             this.lblPlayer2.TabIndex = 26;
             this.lblPlayer2.Text = "Player 2:";
             this.lblPlayer2.Visible = false;
@@ -176,9 +183,10 @@
             // 
             this.lblScorePlayer2.AutoSize = true;
             this.lblScorePlayer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScorePlayer2.Location = new System.Drawing.Point(900, 324);
+            this.lblScorePlayer2.Location = new System.Drawing.Point(675, 263);
+            this.lblScorePlayer2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScorePlayer2.Name = "lblScorePlayer2";
-            this.lblScorePlayer2.Size = new System.Drawing.Size(35, 38);
+            this.lblScorePlayer2.Size = new System.Drawing.Size(29, 31);
             this.lblScorePlayer2.TabIndex = 28;
             this.lblScorePlayer2.Text = "0";
             this.lblScorePlayer2.Visible = false;
@@ -187,9 +195,10 @@
             // 
             this.lblScorePlayer1.AutoSize = true;
             this.lblScorePlayer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScorePlayer1.Location = new System.Drawing.Point(900, 279);
+            this.lblScorePlayer1.Location = new System.Drawing.Point(675, 227);
+            this.lblScorePlayer1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScorePlayer1.Name = "lblScorePlayer1";
-            this.lblScorePlayer1.Size = new System.Drawing.Size(35, 38);
+            this.lblScorePlayer1.Size = new System.Drawing.Size(29, 31);
             this.lblScorePlayer1.TabIndex = 27;
             this.lblScorePlayer1.Text = "0";
             this.lblScorePlayer1.Visible = false;
@@ -197,9 +206,10 @@
             // pctbx12
             // 
             this.pctbx12.Enabled = false;
-            this.pctbx12.Location = new System.Drawing.Point(313, 119);
+            this.pctbx12.Location = new System.Drawing.Point(235, 97);
+            this.pctbx12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx12.Name = "pctbx12";
-            this.pctbx12.Size = new System.Drawing.Size(100, 100);
+            this.pctbx12.Size = new System.Drawing.Size(75, 81);
             this.pctbx12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx12.TabIndex = 21;
             this.pctbx12.TabStop = false;
@@ -209,9 +219,10 @@
             // pctbx17
             // 
             this.pctbx17.Enabled = false;
-            this.pctbx17.Location = new System.Drawing.Point(543, 463);
+            this.pctbx17.Location = new System.Drawing.Point(407, 376);
+            this.pctbx17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx17.Name = "pctbx17";
-            this.pctbx17.Size = new System.Drawing.Size(100, 100);
+            this.pctbx17.Size = new System.Drawing.Size(75, 81);
             this.pctbx17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx17.TabIndex = 20;
             this.pctbx17.TabStop = false;
@@ -221,9 +232,10 @@
             // pctbx18
             // 
             this.pctbx18.Enabled = false;
-            this.pctbx18.Location = new System.Drawing.Point(543, 349);
+            this.pctbx18.Location = new System.Drawing.Point(407, 284);
+            this.pctbx18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx18.Name = "pctbx18";
-            this.pctbx18.Size = new System.Drawing.Size(100, 100);
+            this.pctbx18.Size = new System.Drawing.Size(75, 81);
             this.pctbx18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx18.TabIndex = 19;
             this.pctbx18.TabStop = false;
@@ -233,9 +245,10 @@
             // pctbx19
             // 
             this.pctbx19.Enabled = false;
-            this.pctbx19.Location = new System.Drawing.Point(543, 234);
+            this.pctbx19.Location = new System.Drawing.Point(407, 190);
+            this.pctbx19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx19.Name = "pctbx19";
-            this.pctbx19.Size = new System.Drawing.Size(100, 100);
+            this.pctbx19.Size = new System.Drawing.Size(75, 81);
             this.pctbx19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx19.TabIndex = 18;
             this.pctbx19.TabStop = false;
@@ -245,9 +258,10 @@
             // pctbx20
             // 
             this.pctbx20.Enabled = false;
-            this.pctbx20.Location = new System.Drawing.Point(543, 119);
+            this.pctbx20.Location = new System.Drawing.Point(407, 97);
+            this.pctbx20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx20.Name = "pctbx20";
-            this.pctbx20.Size = new System.Drawing.Size(100, 100);
+            this.pctbx20.Size = new System.Drawing.Size(75, 81);
             this.pctbx20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx20.TabIndex = 17;
             this.pctbx20.TabStop = false;
@@ -257,9 +271,10 @@
             // pctbx13
             // 
             this.pctbx13.Enabled = false;
-            this.pctbx13.Location = new System.Drawing.Point(428, 463);
+            this.pctbx13.Location = new System.Drawing.Point(321, 376);
+            this.pctbx13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx13.Name = "pctbx13";
-            this.pctbx13.Size = new System.Drawing.Size(100, 100);
+            this.pctbx13.Size = new System.Drawing.Size(75, 81);
             this.pctbx13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx13.TabIndex = 16;
             this.pctbx13.TabStop = false;
@@ -269,9 +284,10 @@
             // pctbx14
             // 
             this.pctbx14.Enabled = false;
-            this.pctbx14.Location = new System.Drawing.Point(428, 349);
+            this.pctbx14.Location = new System.Drawing.Point(321, 284);
+            this.pctbx14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx14.Name = "pctbx14";
-            this.pctbx14.Size = new System.Drawing.Size(100, 100);
+            this.pctbx14.Size = new System.Drawing.Size(75, 81);
             this.pctbx14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx14.TabIndex = 15;
             this.pctbx14.TabStop = false;
@@ -281,9 +297,10 @@
             // pctbx15
             // 
             this.pctbx15.Enabled = false;
-            this.pctbx15.Location = new System.Drawing.Point(428, 234);
+            this.pctbx15.Location = new System.Drawing.Point(321, 190);
+            this.pctbx15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx15.Name = "pctbx15";
-            this.pctbx15.Size = new System.Drawing.Size(100, 100);
+            this.pctbx15.Size = new System.Drawing.Size(75, 81);
             this.pctbx15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx15.TabIndex = 14;
             this.pctbx15.TabStop = false;
@@ -293,9 +310,10 @@
             // pctbx16
             // 
             this.pctbx16.Enabled = false;
-            this.pctbx16.Location = new System.Drawing.Point(428, 119);
+            this.pctbx16.Location = new System.Drawing.Point(321, 97);
+            this.pctbx16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx16.Name = "pctbx16";
-            this.pctbx16.Size = new System.Drawing.Size(100, 100);
+            this.pctbx16.Size = new System.Drawing.Size(75, 81);
             this.pctbx16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx16.TabIndex = 13;
             this.pctbx16.TabStop = false;
@@ -305,9 +323,10 @@
             // pctbx9
             // 
             this.pctbx9.Enabled = false;
-            this.pctbx9.Location = new System.Drawing.Point(313, 463);
+            this.pctbx9.Location = new System.Drawing.Point(235, 376);
+            this.pctbx9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx9.Name = "pctbx9";
-            this.pctbx9.Size = new System.Drawing.Size(100, 100);
+            this.pctbx9.Size = new System.Drawing.Size(75, 81);
             this.pctbx9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx9.TabIndex = 12;
             this.pctbx9.TabStop = false;
@@ -317,9 +336,10 @@
             // pctbx10
             // 
             this.pctbx10.Enabled = false;
-            this.pctbx10.Location = new System.Drawing.Point(313, 349);
+            this.pctbx10.Location = new System.Drawing.Point(235, 284);
+            this.pctbx10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx10.Name = "pctbx10";
-            this.pctbx10.Size = new System.Drawing.Size(100, 100);
+            this.pctbx10.Size = new System.Drawing.Size(75, 81);
             this.pctbx10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx10.TabIndex = 11;
             this.pctbx10.TabStop = false;
@@ -329,9 +349,10 @@
             // pctbx11
             // 
             this.pctbx11.Enabled = false;
-            this.pctbx11.Location = new System.Drawing.Point(313, 234);
+            this.pctbx11.Location = new System.Drawing.Point(235, 190);
+            this.pctbx11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx11.Name = "pctbx11";
-            this.pctbx11.Size = new System.Drawing.Size(100, 100);
+            this.pctbx11.Size = new System.Drawing.Size(75, 81);
             this.pctbx11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx11.TabIndex = 10;
             this.pctbx11.TabStop = false;
@@ -341,9 +362,10 @@
             // pctbx5
             // 
             this.pctbx5.Enabled = false;
-            this.pctbx5.Location = new System.Drawing.Point(198, 463);
+            this.pctbx5.Location = new System.Drawing.Point(148, 376);
+            this.pctbx5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx5.Name = "pctbx5";
-            this.pctbx5.Size = new System.Drawing.Size(100, 100);
+            this.pctbx5.Size = new System.Drawing.Size(75, 81);
             this.pctbx5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx5.TabIndex = 8;
             this.pctbx5.TabStop = false;
@@ -353,9 +375,10 @@
             // pctbx6
             // 
             this.pctbx6.Enabled = false;
-            this.pctbx6.Location = new System.Drawing.Point(198, 349);
+            this.pctbx6.Location = new System.Drawing.Point(148, 284);
+            this.pctbx6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx6.Name = "pctbx6";
-            this.pctbx6.Size = new System.Drawing.Size(100, 100);
+            this.pctbx6.Size = new System.Drawing.Size(75, 81);
             this.pctbx6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx6.TabIndex = 7;
             this.pctbx6.TabStop = false;
@@ -365,9 +388,10 @@
             // pctbx7
             // 
             this.pctbx7.Enabled = false;
-            this.pctbx7.Location = new System.Drawing.Point(198, 234);
+            this.pctbx7.Location = new System.Drawing.Point(148, 190);
+            this.pctbx7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx7.Name = "pctbx7";
-            this.pctbx7.Size = new System.Drawing.Size(100, 100);
+            this.pctbx7.Size = new System.Drawing.Size(75, 81);
             this.pctbx7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx7.TabIndex = 6;
             this.pctbx7.TabStop = false;
@@ -377,9 +401,10 @@
             // pctbx8
             // 
             this.pctbx8.Enabled = false;
-            this.pctbx8.Location = new System.Drawing.Point(198, 119);
+            this.pctbx8.Location = new System.Drawing.Point(148, 97);
+            this.pctbx8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx8.Name = "pctbx8";
-            this.pctbx8.Size = new System.Drawing.Size(100, 100);
+            this.pctbx8.Size = new System.Drawing.Size(75, 81);
             this.pctbx8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx8.TabIndex = 5;
             this.pctbx8.TabStop = false;
@@ -389,9 +414,10 @@
             // pctbx4
             // 
             this.pctbx4.Enabled = false;
-            this.pctbx4.Location = new System.Drawing.Point(83, 463);
+            this.pctbx4.Location = new System.Drawing.Point(62, 376);
+            this.pctbx4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx4.Name = "pctbx4";
-            this.pctbx4.Size = new System.Drawing.Size(100, 100);
+            this.pctbx4.Size = new System.Drawing.Size(75, 81);
             this.pctbx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx4.TabIndex = 4;
             this.pctbx4.TabStop = false;
@@ -401,9 +427,10 @@
             // pctbx3
             // 
             this.pctbx3.Enabled = false;
-            this.pctbx3.Location = new System.Drawing.Point(83, 349);
+            this.pctbx3.Location = new System.Drawing.Point(62, 284);
+            this.pctbx3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx3.Name = "pctbx3";
-            this.pctbx3.Size = new System.Drawing.Size(100, 100);
+            this.pctbx3.Size = new System.Drawing.Size(75, 81);
             this.pctbx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx3.TabIndex = 3;
             this.pctbx3.TabStop = false;
@@ -413,9 +440,10 @@
             // pctbx2
             // 
             this.pctbx2.Enabled = false;
-            this.pctbx2.Location = new System.Drawing.Point(83, 234);
+            this.pctbx2.Location = new System.Drawing.Point(62, 190);
+            this.pctbx2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx2.Name = "pctbx2";
-            this.pctbx2.Size = new System.Drawing.Size(100, 100);
+            this.pctbx2.Size = new System.Drawing.Size(75, 81);
             this.pctbx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx2.TabIndex = 2;
             this.pctbx2.TabStop = false;
@@ -425,9 +453,10 @@
             // pctbx1
             // 
             this.pctbx1.Enabled = false;
-            this.pctbx1.Location = new System.Drawing.Point(83, 119);
+            this.pctbx1.Location = new System.Drawing.Point(62, 97);
+            this.pctbx1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctbx1.Name = "pctbx1";
-            this.pctbx1.Size = new System.Drawing.Size(100, 100);
+            this.pctbx1.Size = new System.Drawing.Size(75, 81);
             this.pctbx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctbx1.TabIndex = 1;
             this.pctbx1.TabStop = false;
@@ -439,9 +468,10 @@
             this.lblTitleScreen.AutoSize = true;
             this.lblTitleScreen.Enabled = false;
             this.lblTitleScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleScreen.Location = new System.Drawing.Point(289, 195);
+            this.lblTitleScreen.Location = new System.Drawing.Point(217, 158);
+            this.lblTitleScreen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitleScreen.Name = "lblTitleScreen";
-            this.lblTitleScreen.Size = new System.Drawing.Size(514, 69);
+            this.lblTitleScreen.Size = new System.Drawing.Size(410, 55);
             this.lblTitleScreen.TabIndex = 29;
             this.lblTitleScreen.Text = "MEMORRYYYY!!!";
             this.lblTitleScreen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -449,9 +479,10 @@
             // btnBeginSpel
             // 
             this.btnBeginSpel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBeginSpel.Location = new System.Drawing.Point(484, 279);
+            this.btnBeginSpel.Location = new System.Drawing.Point(331, 233);
+            this.btnBeginSpel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBeginSpel.Name = "btnBeginSpel";
-            this.btnBeginSpel.Size = new System.Drawing.Size(176, 33);
+            this.btnBeginSpel.Size = new System.Drawing.Size(132, 38);
             this.btnBeginSpel.TabIndex = 30;
             this.btnBeginSpel.Text = "Begin spel!";
             this.btnBeginSpel.UseVisualStyleBackColor = true;
@@ -459,9 +490,10 @@
             // 
             // MemoryGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1056, 603);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(792, 490);
             this.Controls.Add(this.btnBeginSpel);
             this.Controls.Add(this.lblTitleScreen);
             this.Controls.Add(this.lblScorePlayer2);
@@ -492,9 +524,14 @@
             this.Controls.Add(this.pctbx2);
             this.Controls.Add(this.pctbx1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MemoryGame";
-            this.Text = "Form1";
+            this.Text = "Memory game";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctbx12)).EndInit();

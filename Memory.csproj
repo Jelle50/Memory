@@ -92,6 +92,7 @@
     <Content Include="fotostest\8.png" />
     <Content Include="fotostest\9.png" />
     <Content Include="fotostest\covercardpic.png" />
+    <Content Include="icon\gameicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
