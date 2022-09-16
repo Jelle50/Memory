@@ -28,7 +28,7 @@ namespace Memory
         PictureBox EersteKaart;
         PictureBox TweedeKaart;
         List<int> GeschuddeKaarten = new List<int> { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10 };
-        string fotomap = "C:/fontys/leerjaar 5/periode 1/SCC/Opdrachten/Opdracht1/Memory Spel/fotostest/";
+        //string fotomap = "C:/fontys/leerjaar 5/periode 1/SCC/Opdrachten/Opdracht1/Memory Spel/fotostest/";
 
         public MemoryGame()
         {
@@ -53,7 +53,7 @@ namespace Memory
                 //pictureBox.Visible = true;
                 pictureBox.Enabled = true;
                 pictureBox.Tag = GeschuddeKaarten[i].ToString();
-                pictureBox.Image = System.Drawing.Image.FromFile(fotomap + "covercardpic.png");
+                pictureBox.Image = System.Drawing.Image.FromFile("fotos/memoryfotos/" + "covercardpic.png");
 
                 i++;
             }
@@ -109,7 +109,7 @@ namespace Memory
 
                 EersteKaart = sender as PictureBox;
                 EersteKaart.Enabled = false;
-                EersteKaart.Image = System.Drawing.Image.FromFile(fotomap + EersteKaart.Tag.ToString() + ".png");
+                EersteKaart.Image = System.Drawing.Image.FromFile("fotos/memoryfotos/" + EersteKaart.Tag.ToString() + ".png");
                 EersteKeus = true;
             }
 
@@ -119,7 +119,7 @@ namespace Memory
 
                 TweedeKaart = sender as PictureBox;
                 TweedeKaart.Enabled = false;
-                TweedeKaart.Image = System.Drawing.Image.FromFile(fotomap + TweedeKaart.Tag.ToString() + ".png");
+                TweedeKaart.Image = System.Drawing.Image.FromFile("fotos/memoryfotos/" + TweedeKaart.Tag.ToString() + ".png");
                 TweedeKaart.Refresh();
                 TweedeKeus = true;
             }
@@ -165,8 +165,8 @@ namespace Memory
                 System.Threading.Thread.Sleep(1000);
 
                 // Foto terug veranderen naar achterkantfoto
-                A.Image = System.Drawing.Image.FromFile(fotomap + "covercardpic.png");
-                B.Image = System.Drawing.Image.FromFile(fotomap + "covercardpic.png");
+                A.Image = System.Drawing.Image.FromFile("fotos/memoryfotos/" + "covercardpic.png");
+                B.Image = System.Drawing.Image.FromFile("fotos/memoryfotos/" + "covercardpic.png");
 
                 Turn++;
 

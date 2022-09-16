@@ -81,18 +81,40 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fotostest\1.png" />
-    <Content Include="fotostest\10.png" />
-    <Content Include="fotostest\2.png" />
-    <Content Include="fotostest\3.png" />
-    <Content Include="fotostest\4.png" />
-    <Content Include="fotostest\5.png" />
-    <Content Include="fotostest\6.png" />
-    <Content Include="fotostest\7.png" />
-    <Content Include="fotostest\8.png" />
-    <Content Include="fotostest\9.png" />
-    <Content Include="fotostest\covercardpic.png" />
-    <Content Include="icon\gameicon.ico" />
+    <Content Include="fotos\icon\ProgrammaIcon.ico" />
+    <AdditionalFiles Include="fotos\memoryfotos\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="fotos\memoryfotos\10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="fotos\memoryfotos\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="fotos\memoryfotos\3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="fotos\memoryfotos\4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="fotos\memoryfotos\5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="fotos\memoryfotos\6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="fotos\memoryfotos\7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="fotos\memoryfotos\8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="fotos\memoryfotos\9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="fotos\memoryfotos\covercardpic.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
