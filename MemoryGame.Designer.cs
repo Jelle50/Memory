@@ -1,4 +1,6 @@
-﻿namespace Memory
+﻿using System.Drawing;
+
+namespace Memory
 {
     partial class MemoryGame
     {
@@ -516,7 +518,7 @@
             this.Controls.Add(this.pctbx1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = new Icon("fotos/icon/ProgrammaIcon.ico");
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
