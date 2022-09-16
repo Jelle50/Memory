@@ -82,9 +82,6 @@ namespace Memory
 
         private void InitialiserenScherm(object sender, EventArgs e)
         {
-
-            // 2  var i = 0;
-
             foreach (var pictureBox in Controls.OfType<PictureBox>())
             {
                 pictureBox.Visible = true;
@@ -109,6 +106,7 @@ namespace Memory
             //Kiezen eerste kaart
             if (EersteKeus == false)
             {
+
                 EersteKaart = sender as PictureBox;
                 EersteKaart.Enabled = false;
                 EersteKaart.Image = System.Drawing.Image.FromFile(fotomap + EersteKaart.Tag.ToString() + ".png");
@@ -168,7 +166,7 @@ namespace Memory
 
                 // Foto terug veranderen naar achterkantfoto
                 A.Image = System.Drawing.Image.FromFile(fotomap + "covercardpic.png");
-                B.Image = System.Drawing.Image.FromFile(fotomap+ "covercardpic.png");
+                B.Image = System.Drawing.Image.FromFile(fotomap + "covercardpic.png");
 
                 Turn++;
 
@@ -187,47 +185,54 @@ namespace Memory
                 }
             }
 
+            //Gameover als de totale score 10 is
             if ((Scorepl1 + Scorepl2) == 10)
             {
-                GameOver(Scorepl1, Scorepl2, sender, e);
+                //GameOver(Scorepl1, Scorepl2, sender, e);
+                GameOver(Scorepl1, Scorepl2);
             }
 
             //Keuzen leegmaken
             EersteKeus = false;
             TweedeKeus = false;
+
         }
 
-        void GameOver(int Score1, int Score2, object sender, EventArgs e)
+        void GameOver(int Score1, int Score2)
+        //void GameOver(int Score1, int Score2, object sender, EventArgs e)
         {
+            //Speler 1 en 2 hebben een gelijke score
             if (Score1 == Score2)
             {
                 DialogResult dialogResult = MessageBox.Show("Het is gelijkspel! Wil je nog een keer spelen voor de echter winnaar?", "Gamer over", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
+                    //Herstart het spel
                     Herstartspel();
                 }
             }
+
+            //Speler 1 heeft een hogere score
             if (Score1 > Score2)
             {
                 DialogResult dialogResult = MessageBox.Show("Speler 1 heeft gewonnen! Wil je nog een keer spelen?", "Game over", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
+                    //Herstart het spel
                     Herstartspel();
                 }
             }
+
+            ////Speler 2 heeft een hogere score
             if (Score2 > Score1)
             {
                 DialogResult dialogResult = MessageBox.Show("Speler 2 heeft gewonnen! Wil je nog een keer spelen?", "Game over", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
+                    //Herstart het spel
                     Herstartspel();
                 }
             }
-        }
-
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
